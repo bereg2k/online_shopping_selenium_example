@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.TestInstance;
@@ -22,6 +21,12 @@ public abstract class BaseTest {
     protected final WebDriver driver;
     protected final Wait<WebDriver> wait;
 
+    /**
+     * Test's basic constructor.
+     * <br/>
+     * Among other things, it's useful to configure test variables (test data),
+     * page objects, web driver, etc...
+     */
     public BaseTest() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();

@@ -10,6 +10,12 @@ import java.util.List;
 public abstract class BasePage {
     protected final WebDriver driver;
 
+    /**
+     * Page object's basic constructor.
+     *
+     * @param driver web driver instance to locate and manipulate
+     *               web elements on the page.
+     */
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
